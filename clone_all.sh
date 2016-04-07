@@ -29,11 +29,11 @@ echo ""
 echo "Cloning Additional Required modules..."
 echo ""
 echo "Cloning Web List View Fixed Table Header"
-git clone https://github.com/Elghard/Odoo-App#8.0
+git clone -b 8.0 https://github.com/Elghard/Odoo-App
 echo "Hide 'Login Manage Databases' Link"
-git clone https://github.com/thinkopensolutions/tkobr-addons.git
+git clone -b 8.0 https://github.com/thinkopensolutions/tkobr-addons.git
 echo "Get Canadian Provinces"
-git clone https://github.com/OCA/l10n-canada.git#8.0
+git clone -b 8.0 https://github.com/OCA/l10n-canada.git
 
 echo "NOW YOU NEED TO PRESS 'Update Modules List'"
 
@@ -42,7 +42,7 @@ exit
 #These are other Modules of Interest:
 
 #Employee Time Clock Web App
-git clone https://github.com/marcok/odoo_modules#8.0
+git clone -b 8.0 https://github.com/marcok/odoo_modules
 bzr branch lp:~margin-analysis-core-editors/margin-analysis/7.0 #???
 bzr branch lp:~julius-network-solutions/julius-openobject-addons/7.0 #mrp_partially_ready (You can start the production order even if you only have part of the components)
 bzr branch lp:~openerp-community/openobject-addons/elico-7.0 #mrp_move_direct (Add or Cancel Raw Material in Manufacturing Orders)
