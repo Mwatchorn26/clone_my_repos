@@ -6,9 +6,9 @@ sudo apt-get install bzr
 #switch to the Odoo user for the rest of the commands
 #sudo su - odoo
 if [ -d /opt/odoo/addons/ ]; then
-  cd /opt/odoo/addons/
+  cd /opt/odoo/addons/custom/
 else
-  cd /opt/odoo/odoo-server/addons/
+  cd /opt/odoo/custom/addons/
 #  cd /opt/odoo/$2addons/
 fi
 
