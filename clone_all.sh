@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #install Bazaar, where some of the files still reside
-sudo apt-get install bzr
+#sudo apt-get install bzr
 
 #switch to the Odoo user for the rest of the commands
 #sudo su - odoo
