@@ -6,13 +6,15 @@
 #switch to the Odoo user for the rest of the commands
 #sudo su - odoo
 if [ -d /opt/odoo/addons/ ]; then
+  #PROD and TEST servers:
   if [ -d /opt/odoo/addons/custom ]; then
-    cd /opt/odoo/addons/custom/
+    echo "'custom'folder exists"
   else
+    echo "creating custom folder"
     mkdir /opt/odoo/addons/custom
-    cd /opt/odoo/addons/custom/
+    cd /opt/odoo/addons/custom
   fi
-else
+else #Dev server install:
   cd /opt/odoo/custom/addons/
 fi
 
