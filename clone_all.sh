@@ -33,7 +33,7 @@ git clone https://github.com/Elghard/Odoo-App#8.0
 echo "Hide 'Login Manage Databases' Link"
 git clone https://github.com/thinkopensolutions/tkobr-addons.git
 echo "Get Canadian Provinces"
-git cone https://github.com/OCA/l10n-canada.git#8.0
+git clone https://github.com/OCA/l10n-canada.git#8.0
 
 echo "NOW YOU NEED TO PRESS 'Update Modules List'"
 
