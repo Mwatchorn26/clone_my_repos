@@ -45,3 +45,5 @@ bzr branch lp:~julius-network-solutions/julius-openobject-addons/7.0 #mrp_partia
 bzr branch lp:~openerp-community/openobject-addons/elico-7.0 #mrp_move_direct (Add or Cancel Raw Material in Manufacturing Orders)
                                                              #mrp_change_rm   (Add or Cancel the Raw Material moves in MO)
                                                              #cron_watcher    (Send notification when cron job has not run for X minutes)
+bzr branch lp:~hr-core-editors/hr-timesheet/7.0              #timesheet_task  (replace task work items linked to task with timesheet lines.
+
