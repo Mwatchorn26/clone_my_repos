@@ -6,15 +6,16 @@
 #switch to the Odoo user for the rest of the commands
 #sudo su - odoo
 if [ -d /opt/odoo/addons/ ]; then
-  cd /opt/odoo/addons/custom/
+  if [ -d /opt/odoo/addons/custom ]; then
+    cd /opt/odoo/addons/custom/
+  else
+    mkdir /opt/odoo/addons/custom
+    cd /opt/odoo/addons/custom/
+  fi
 else
   cd /opt/odoo/custom/addons/
-#  cd /opt/odoo/$2addons/
 fi
 
-pwd
-
-exit
 echo "Cloning TEI Custom modules..."
 clone https://github.com/Mwatchorn26/auth_ldaps.git
 clone https://github.com/Mwatchorn26/mrp_shopfloor_terminal.git
