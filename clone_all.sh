@@ -19,7 +19,7 @@ else #Dev server install:
 fi
 
 echo "Cloning TEI Custom modules..."
-git clone https://github.com/Mwatchorn26/auth_ldaps.git
+git clone https://github.com/Mwatchorn26/auth_ldap_rewrite.git
 git clone https://github.com/Mwatchorn26/mrp_shopfloor_terminal.git
 git clone https://github.com/Mwatchorn26/project_issue_service.git
 git clone https://github.com/Mwatchorn26/project_serial_numbers.git
