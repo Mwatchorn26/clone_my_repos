@@ -24,7 +24,7 @@ git clone https://github.com/Mwatchorn26/mrp_shopfloor_terminal.git
 git clone https://github.com/Mwatchorn26/project_issue_service.git
 git clone https://github.com/Mwatchorn26/project_serial_numbers.git
 git clone https://github.com/Mwatchorn26/crm_eto.git
-git clone https://github.com/Mwatchorn26/sale_editable_tree_view.git
+#obsolete (covered in crm_eto) git clone https://github.com/Mwatchorn26/sale_editable_tree_view.git
 echo ""
 echo "Cloning Additional Required modules..."
 echo ""
