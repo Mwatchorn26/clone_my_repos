@@ -1,4 +1,12 @@
 #! /bin/bash
-cd /opt/odoo/$2addons/
-echo "Cloning TEI Custom modules..."
-python /opt/odoo/$2odoo.py -d $1 -i "auth_ldaps, mrp_shopfloor_terminal, project_issue_service, project_serial_numbers, crm_eto, sale_editable_tree_view, web_list_view_sticky, l10n_ca_toponyms, tko_hide_login_manage_databases_link"
+
+if [ -z "$1" ] then;
+  echo "Missing argument: Database name to install the modules in is missing."
+  echo "Usage call ./install_all.sh name_of_db"
+else
+  echo "Installing TEI Custom modules..."
+  python /opt/odoo/odoo-server/odoo.py -d $1 --stop-after-init --addons-path /opt/odoo/custom/addons/,/opt/odoo/odoo-server/addons/ -u all
+  python /opt/odoo/odoo-server/odoo.py -d $1 --stop-after-init --addons-path /opt/odoo/custom/addons/,/opt/odoo/odoo-server/addons/ -i 
+  auth_ldaps,project_issue_service,project_serial_numbers,crm_eto,Odoo-App/web_list_view_sticky,l10n-canada/l10n_ca_toponyms 
+  #,mrp_shopfloor_terminal
+fi
