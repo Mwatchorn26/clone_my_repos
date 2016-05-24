@@ -41,6 +41,17 @@ git clone https://github.com/Mwatchorn26/project_serial_numbers.git
 git clone https://github.com/Mwatchorn26/crm_eto.git
 #obsolete (covered in crm_eto) git clone https://github.com/Mwatchorn26/sale_editable_tree_view.git
 
+
+if [ ! -d /opt/odoo/custom/addons/Akretion ]
+then
+  mkdir /opt/odoo/custom/addons/Akretion
+fi
+cd /opt/odoo/custom/addons/Akretion
+git clone -b 8.0 https://github.com/Mwatchorn26/odoo-usability.git
+#you need to remove this account_move_line_start_end_dates_xls it creates a problem. There's a bug with it.
+#root@OdooVM1:/opt/odoo/custom/addons/Akretion/odoo-usability# rm -rf account_move_line_start_end_dates_xls/
+rm -rf /opt/odoo/custom/addons/Akretion/odoo-usability/account_move_line_start_end_dates_xls
+
 echo ""
 echo "Cloning Additional Required modules..."
 echo ""
