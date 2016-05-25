@@ -41,22 +41,33 @@ git clone https://github.com/Mwatchorn26/project_serial_numbers.git
 git clone https://github.com/Mwatchorn26/crm_eto.git
 #obsolete (covered in crm_eto) git clone https://github.com/Mwatchorn26/sale_editable_tree_view.git
 
+echo ""
+echo "Cloning Additional Required modules..."
+echo ""
 
 if [ ! -d /opt/odoo/custom/addons/Akretion ]
 then
   mkdir /opt/odoo/custom/addons/Akretion
 fi
 cd /opt/odoo/custom/addons/Akretion
-git clone -b 8.0 https://github.com/Mwatchorn26/odoo-usability.git
+git clone -b 8.0 --depth=1 https://github.com/Mwatchorn26/odoo-usability.git
 #you need to remove this account_move_line_start_end_dates_xls it creates a problem. There's a bug with it.
 #root@OdooVM1:/opt/odoo/custom/addons/Akretion/odoo-usability# rm -rf account_move_line_start_end_dates_xls/
 rm -rf /opt/odoo/custom/addons/Akretion/odoo-usability/account_move_line_start_end_dates_xls
 
-echo ""
-echo "Cloning Additional Required modules..."
-echo ""
+if [ ! -d /opt/odoo/custom/addons/Elghard ]
+then
+  mkdir /opt/odoo/custom/addons/Elghard
+fi
+cd /opt/odoo/custom/addons/Elghard
 echo "Get the Repository that holds Cloning Web List View Fixed Table Header module."
 git clone -b 8.0  --depth=1 https://github.com/Elghard/Odoo-App
+
+if [ ! -d /opt/odoo/custom/addons/thinkopensolutions ]
+then
+  mkdir /opt/odoo/custom/addons/thinkopensolutions
+fi
+cd /opt/odoo/custom/addons/thinkopensolutions
 echo "Get the Repository that holds Hide Login Manage Databases Link module."
 git clone -b 8.0  --depth=1 https://github.com/thinkopensolutions/tkobr-addons.git
 
@@ -89,6 +100,12 @@ echo "Get OCA HR Timesheet Repository:"
 git clone -b 8.0 --depth=1 https://github.com/OCA/sale-financial.git
 
 
+if [ ! -d /opt/odoo/custom/addons/dreispt ]
+then
+  mkdir /opt/odoo/custom/addons/dreispt
+fi
+cd /opt/odoo/custom/addons/dreispt
+git clone -b 8.0 --depth=1 https://github.com/dreispt/odoo-addons.git
 
 #echo "NOW YOU NEED TO PRESS 'Update Modules List' IN THE SETTINGS MENU"
 echo "Now you need to run ./install_all.sh"
