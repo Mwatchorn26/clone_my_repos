@@ -16,9 +16,9 @@ fi
 
 #switch to the Odoo user for the rest of the commands
 #if [ $USER -eq "odoo" ] 
-printf "\n\nSwitching to user: odoo.\n\nPlease enter your password."
+#printf "\n\nSwitching to user: odoo.\n\nPlease enter your password."
 #sudo su - odoo -s /bin/bash
-su -c "clone_all.sh" -m "odoo" 
+#su -c "clone_all.sh" -m "odoo" 
 #fi
 
 if [ interactive="y" ] 
