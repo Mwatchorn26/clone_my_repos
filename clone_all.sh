@@ -26,7 +26,7 @@ if [ -d /opt/odoo/addons/ ]; then
     cd $CUSTOM_ADDONS_PATH
   fi
 else #Dev server install:
-  CUSTOM_ADDONS_PATH="/opt/odoo/custom/addons/"
+  CUSTOM_ADDONS_PATH="/opt/odoo/custom/addons"
   cd $CUSTOM_ADDONS_PATH
 fi
 
