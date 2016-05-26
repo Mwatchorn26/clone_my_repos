@@ -1,7 +1,7 @@
 #! /bin/bash
 echo "Run in interactive mode?(y/n)"
 read interactive
-if [ interactive="y"]
+if [ interactive="y" ] 
 then
   set -x
   trap read debug
@@ -15,7 +15,7 @@ fi
 #sudo apt-get install bzr
 
 #switch to the Odoo user for the rest of the commands
-if [ $USER -eq "odoo"]
+if [ $USER -eq "odoo" ] 
   printf "\n\nSwitching to user: odoo.\n\nPlease enter your password."
   sudo su - odoo -s /bin/bash
 fi
@@ -45,7 +45,7 @@ echo ""
 echo "Cloning Additional Required modules..."
 echo ""
 
-if [ ! -d /opt/odoo/custom/addons/Akretion ]
+if [ ! -d /opt/odoo/custom/addons/Akretion ] 
 then
   mkdir /opt/odoo/custom/addons/Akretion
 fi
@@ -55,7 +55,7 @@ git clone -b 8.0 --depth=1 https://github.com/Mwatchorn26/odoo-usability.git
 #root@OdooVM1:/opt/odoo/custom/addons/Akretion/odoo-usability# rm -rf account_move_line_start_end_dates_xls/
 rm -rf /opt/odoo/custom/addons/Akretion/odoo-usability/account_move_line_start_end_dates_xls
 
-if [ ! -d /opt/odoo/custom/addons/Elghard ]
+if [ ! -d /opt/odoo/custom/addons/Elghard ] 
 then
   mkdir /opt/odoo/custom/addons/Elghard
 fi
@@ -63,7 +63,7 @@ cd /opt/odoo/custom/addons/Elghard
 echo "Get the Repository that holds Cloning Web List View Fixed Table Header module."
 git clone -b 8.0  --depth=1 https://github.com/Elghard/Odoo-App
 
-if [ ! -d /opt/odoo/custom/addons/thinkopensolutions ]
+if [ ! -d /opt/odoo/custom/addons/thinkopensolutions ] 
 then
   mkdir /opt/odoo/custom/addons/thinkopensolutions
 fi
@@ -72,7 +72,7 @@ echo "Get the Repository that holds Hide Login Manage Databases Link module."
 git clone -b 8.0  --depth=1 https://github.com/thinkopensolutions/tkobr-addons.git
 
 #Prep for all the OCA (Odoo Community Association) repositories and modules
-if [ ! -d /opt/odoo/custom/addons/OCA ]
+if [ ! -d /opt/odoo/custom/addons/OCA ] 
 then
   mkdir /opt/odoo/custom/addons/OCA
 fi
@@ -99,8 +99,12 @@ git clone -b 8.0 --depth=1 https://github.com/OCA/hr-timesheet.git
 echo "Get OCA HR Timesheet Repository:"
 git clone -b 8.0 --depth=1 https://github.com/OCA/sale-financial.git
 
+echo "Get OCA Partner Firstname:"
+git clone -b 8.0 --depth=1 https://github.com/OCA/partner-contact.git
 
-if [ ! -d /opt/odoo/custom/addons/dreispt ]
+
+
+if [ ! -d /opt/odoo/custom/addons/dreispt ] 
 then
   mkdir /opt/odoo/custom/addons/dreispt
 fi
