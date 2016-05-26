@@ -17,7 +17,7 @@ fi
 
 if [ -d /opt/odoo/addons/ ]; then
   #PROD and TEST servers:
-  $CUSTOM_ADDONS_PATH = "/opt/odoo/addons/custom"
+  CUSTOM_ADDONS_PATH = "/opt/odoo/addons/custom"
   if [ -d  $CUSTOM_ADDONS_PATH ]; then
     echo "custom folder exists"
   else
@@ -26,7 +26,7 @@ if [ -d /opt/odoo/addons/ ]; then
     cd $CUSTOM_ADDONS_PATH
   fi
 else #Dev server install:
-  $CUSTOM_ADDONS_PATH = "/opt/odoo/custom/addons/"
+  CUSTOM_ADDONS_PATH = "/opt/odoo/custom/addons/"
   cd $CUSTOM_ADDONS_PATH
 fi
 
