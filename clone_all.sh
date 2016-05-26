@@ -51,11 +51,11 @@ git clone -b 8.0 --depth=1 https://github.com/Mwatchorn26/odoo-usability.git
 
 #you need to remove this account_move_line_start_end_dates_xls it creates a problem. There's a bug with it.
 #root@OdooVM1:/opt/odoo/custom/addons/Akretion/odoo-usability# rm -rf account_move_line_start_end_dates_xls/
-rm -rf /$CUSTOM_ADDONS_PATH/opt/odoo/custom/addons/Akretion/odoo-usability/account_move_line_start_end_dates_xls
+rm -rf /$CUSTOM_ADDONS_PATH/Akretion/odoo-usability/account_move_line_start_end_dates_xls
 
 if [ ! -d $CUSTOM_ADDONS_PATH/Elghard ]
 then
-  mkdir $CUSTOM_ADDONS_PATH/opt/odoo/custom/addons/Elghard
+  mkdir $CUSTOM_ADDONS_PATH/Elghard
 fi
 cd $CUSTOM_ADDONS_PATH/Elghard
 echo "Get the Repository that holds Cloning Web List View Fixed Table Header module."
@@ -70,7 +70,7 @@ echo "Get the Repository that holds Hide Login Manage Databases Link module."
 git clone -b 8.0  --depth=1 https://github.com/thinkopensolutions/tkobr-addons.git
 
 #Prep for all the OCA (Odoo Community Association) repositories and modules
-if [ ! -d $CUSTOM_ADDONS_PATH/opt/odoo/custom/addons/OCA ]
+if [ ! -d $CUSTOM_ADDONS_PATH/OCA ]
 then
   mkdir $CUSTOM_ADDONS_PATH/OCA
 fi
