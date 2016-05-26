@@ -21,4 +21,14 @@ printf "\n\nSwitching to user: odoo.\n\nPlease enter your password."
 su -c "clone_all.sh" -m "odoo" 
 #fi
 
+if [ interactive="y" ] 
+then
+  su -c "clone_all.sh interactive" -m "odoo" 
+else
+  echo "Proceeding with without further interaction."
+  sleep 1
+  su -c "clone_all.sh" -m "odoo" 
+fi
+
+
 exit
