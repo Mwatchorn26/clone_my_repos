@@ -23,11 +23,11 @@ su -c "clone_all.sh" -m "odoo"
 
 if [ interactive="y" ] 
 then
-  su -c "./clone_all.sh interactive" -m "odoo" 
+  su -c "./clone_all.sh interactive" "odoo" 
 else
   echo "Proceeding with without further interaction."
   sleep 1
-  su -c "./clone_all.sh" -m "odoo" 
+  su -c "./clone_all.sh" "odoo" 
 fi
 
 
