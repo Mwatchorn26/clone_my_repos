@@ -1,6 +1,10 @@
 #! /bin/bash
 #echo "Run in interactive mode?(y/n)"
 #read interactive
+echo ""
+echo "Started clone_all.sh"
+echo ""
+
 if [ $1="interactive" ]
 then
   set -x
