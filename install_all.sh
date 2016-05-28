@@ -15,16 +15,28 @@ else
     CUSTOM_ADDONS_PATH="/opt/odoo/custom/addons"
   fi
   
-  /opt/odoo/custom/addons/OCA/partner-contact,/opt/odoo/custom/addons/Akretion/odoo-usability
-
   addons=$CUSTOM_ADDONS_PATH
-  addons=$addons,$CUSTOM_ADDONS_PATH/Akretion/odoo-usability
-  addons=$addons,$CUSTOM_ADDONS_PATH/Elghard/Odoo-App
-  addons=$addons,$CUSTOM_ADDONS_PATH/thinkopensolutions/tkobr-addons
+  addons=$addons,$CUSTOM_ADDONS_PATH/Akretion/odoo-usability          #module: base_usability (display partner.title)
+  addons=$addons,$CUSTOM_ADDONS_PATH/Elghard/Odoo-App                 #module: web_list_view_sticky
+  addons=$addons,$CUSTOM_ADDONS_PATH/thinkopensolutions/tkobr-addons  #module: tko_hide_login_manage_databases_link 
+                                                                      #module: tko_mail_smtp_per_user
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/l10n-canada
-  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/manufacture
-  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/server-tools  
-  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/account-analytic
+  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/manufacture                  #module: mrp_bom_product_details (This module adds product price and stock to bom view)
+                                                                      #module: mrp_bom_version (may work for versioning! Needs Testing!!!)
+                                                                      #module: mrp_production_estimated_cost
+                                                                      #module: mrp_production_real_cost (maybe, need testing)
+                                                                      
+                                                                      
+  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/server-tools                 #module: mass_editing
+                                                                      #module: auth_brute_force
+                                                                      #module: cron_run_manually
+                                                                      #module: database_cleanup (for DEV only)
+                                                                      #module: disable_openerp_online
+                                                                      #module: module_prototyper (for DEV only)
+                                                                      #module: scheduler_error_mailer
+                                                                      #module: shell (for DEV only)
+                                                                      
+  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/account-analytic             #module:
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/project
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/hr-timesheet
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/sale-financial
