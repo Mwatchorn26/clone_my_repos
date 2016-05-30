@@ -20,12 +20,11 @@ else
   addons=$addons,$CUSTOM_ADDONS_PATH/Elghard/Odoo-App                 #module: web_list_view_sticky
   addons=$addons,$CUSTOM_ADDONS_PATH/thinkopensolutions/tkobr-addons  #module: tko_hide_login_manage_databases_link 
                                                                       #module: tko_mail_smtp_per_user
-  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/l10n-canada
+  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/l10n-canada                  #module: l10n_ca_toponyms
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/manufacture                  #module: mrp_bom_product_details (This module adds product price and stock to bom view)
                                                                       #module: mrp_bom_version (may work for versioning! Needs Testing!!!)
                                                                       #module: mrp_production_estimated_cost
                                                                       #module: mrp_production_real_cost (maybe, need testing)
-                                                                      
                                                                       
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/server-tools                 #module: mass_editing
                                                                       #module: auth_brute_force
@@ -40,8 +39,8 @@ else
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/project
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/hr-timesheet
   addons=$addons,$CUSTOM_ADDONS_PATH/OCA/sale-financial
-  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/partner-contact
-  addons=$addons,$CUSTOM_ADDONS_PATH/dreispt/odoo-addons
+  addons=$addons,$CUSTOM_ADDONS_PATH/OCA/partner-contact              #module: partner-firstname
+  addons=$addons,$CUSTOM_ADDONS_PATH/dreispt/odoo-addons              #module: import_sqlpush
   
   
   python /opt/odoo/odoo-server/odoo.py -d $1 --stop-after-init --addons-path $CUSTOM_ADDONS_PATH/,$CUSTOM_ADDONS_PATH/OCA/partner-contact,$CUSTOM_ADDONS_PATH -u all
